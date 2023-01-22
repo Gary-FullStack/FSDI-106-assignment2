@@ -43,7 +43,7 @@ function saveData() {
 // append to the html element
 function displayTask(taskInput) {
 	let syntax = `<div class="task">
-	
+
 	  <div><h3>${taskInput.title}</h3>	
 	<p>${taskInput.taskdue}</p></div>
 
