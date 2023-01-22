@@ -1,4 +1,4 @@
-# FSDI-106-assignment2
+# FSDI-106-assignments
 
 
 assignment for 106
