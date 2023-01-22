@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "lato", sans-serif;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.606);
+}
+
+/* code for the nav bar stuff */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  background: #546fe7;
+}
+
+.main-nav {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.logo {
+  float: left;
+  padding: 27px 0;
+  color: white;
+}
+
+.navi-menu {
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navi-menu a {
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: 0.3s linear;
+}
+
+.navi-menu i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.home {
+  color: rgb(249, 181, 6);
+}
+
+.navi-menu a:hover {
+  background: #273b91;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.navi-toggle-btn {
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: rgb(210, 17, 17);
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+} /* end of nav bar */
+
+.container {
+  display: flex;
+  padding-top: 100px;
+}
+
+.form-container {
+  background-color: grey;
+  flex: 1;
+  border: 2px solid yellow;
+  color: white;
+}
+
+.list-container {
+  background-color: thistle;
+  flex: 2;
+  border: 2px solid yellow;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.section-container {
+  border: 2px solid yellow;
+}
+
+.task {
+  display: flex;
+}
+
+label {
+  display: block;
+  width: 90px;
+}
+
+.task label {
+  display: block;
+}
+
+.main-icon {
+  font-size: 40px;
+  color: blueviolet;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+#nonImportant {
+  font-size: 40px;
+  color: rgb(82, 241, 14);
+  cursor: pointer;
+}
+
+#iImportant.important {
+  color: red;
+}
+
+#btnHideForm {
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+/* some bits to make the nav responsive. */
+
+@media screen and (max-width: 900px) {
+  .navi-toggle-btn {
+    display: block !important;
+  }
+
+  .navi-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navi-menu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navi-menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navi-menu.active {
+    display: block;
+  }
+}

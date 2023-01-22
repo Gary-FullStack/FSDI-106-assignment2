@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task Manager</title>
+	<script src="https://kit.fontawesome.com/144d70894d.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="main-nav">
+
+			<h1 class="logo">Task Manager Project</h1>
+			<i class="navi-toggle-btn fas fa-bars"></i>
+			<nav class="navi-menu">
+				<a href="#"><i class="fas fa-home home"></i> Home</a>
+				<a href="#"> About</a>
+				<a href="#"> Contact</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+
+		<!-- this is the form side -->
+		<div class="form-container">
+			<section class="form-container">Task Input Form</section>
+
+			<div class="input-container">
+				<i id="iImportant" class="main-icon fa-solid fa-thumbs-down"></i>
+
+			</div>
+
+			<div class="input-container">
+				<label>Title</label>
+				<input id="txtTaskTitle" type="text" placeholder="Task Title">
+			</div>
+
+			<div class="input-container">
+				<label>Due Date</label>
+				<input id="txtTaskDue" type="datetime-local" placeholder="Task Due Date">
+			</div>
+
+			<div class="input-container">
+				<label>Task Type</label>
+				<select id="txtTaskType">
+					<option value="">--Please choose--</option>
+					<option value="Work">Work</option>
+					<option value="Play">Play</option>
+					<option value="Family">Family</option>
+					<option value="Friends">Friends</option>
+				</select>
+			</div>
+
+			<div class="input-container">
+				<Label>Contact</Label>
+				<input id="txtContact" type="text" placeholder="Contact ">
+			</div>
+
+			<div class="input-container">
+				<label>Status</label>
+				<select id="txtStatus">
+					<option value="">--Please choose--</option>
+					<option value="Ready">Ready</option>
+					<option value="inProgress">In progress</option>
+					<option value="Completed">Completed</option>
+					<option value="Cancelled">Cancelled</option>
+				</select>
+			</div>
+
+			<div class="input-container">
+				<label>Description</label>
+				<textarea rows="4" id="txtArea"></textarea>
+			</div>
+
+			<div id="saveData" class="input-container">
+				<section> Save data</section>
+				<button id="btnSave">Save</button>
+
+			</div>
+
+
+
+
+		</div> <!-- end of form input -->
+
+		<!-- this is the list display side -->
+		<div id="form" class="list-container">
+
+			<section class="section-container">Task List
+				<button id="btnHideForm">Hide Form</button>
+
+
+
+				<section>
+
+
+
+		</div> <!-- end of list display -->
+
+
+	</main>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script src="/js/class.js"></script>
+	<script src="/js/script.js"></script>
+
+</body>
+
+</html>
