@@ -179,8 +179,10 @@ label {
 
 .task {
   display: flex;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 18px;
   text-align: center;
+  justify-content: space-around;
   background-color: #7d7d7d;
   color: #000000;
   font-weight: bold;
