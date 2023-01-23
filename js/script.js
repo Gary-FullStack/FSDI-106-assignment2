@@ -42,21 +42,23 @@ function saveData() {
 
 // append to the html element
 function displayTask(taskInput) {
+
 	let syntax = `<div class="task">
 
-	  <div><h3>${taskInput.title}</h3>	
+	  <div class="row1"><h3>${taskInput.title}</h3>	
 	<p>${taskInput.taskdue}</p></div>
 
-		<div><p>${taskInput.tasktype}</p>
+		<div class="row2"><p>${taskInput.tasktype}</p>
 	<p>${taskInput.contact}</p></div>
 
-		<div><p>${taskInput.status}</p>
+		<div class="row3"><p>${taskInput.status}</p>
 	<p>${taskInput.area}</p></div>
 
-		<div><label>${taskInput.contact}</label>
+		<div class="row4" ><label>${taskInput.contact}</label>
 	<label>${taskInput.status}</label></div>
 
 	</div>`;
+
 	$(".list-container").append(syntax);
 
 }
