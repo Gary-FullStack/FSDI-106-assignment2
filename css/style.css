@@ -1,4 +1,4 @@
-/* I'm a coder not an interior designer. */
+/* I'm a coder not an interior designer. :) */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;1,100&display=swap");
 
@@ -99,10 +99,6 @@ header {
 }
 .section-container {
   border: 2px solid yellow;
-}
-
-.task {
-  display: flex;
 }
 
 label {
