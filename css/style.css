@@ -13,6 +13,14 @@ body {
   background-color: rgba(0, 0, 0, 0.606);
 }
 
+body {
+  min-height: 100%;
+  background-image: url(/img/bgimg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 /* code for the nav bar stuff */
 header {
   display: flex;
@@ -186,7 +194,7 @@ label {
 }
 
 h3 {
-  color: red;
+  color: rgba(186, 41, 41, 0.545);
 }
 
 .row1 {

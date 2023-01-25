@@ -37,7 +37,24 @@ function saveData() {
 	let area = $("#txtArea").val();
 
 	let taskInput = new Task(title, taskdue, tasktype, contact, status, area, isImportant);
-	displayTask(taskInput);
+
+	// this is the save to server
+	$.ajax({
+		type: "POST",
+		url: "https://fsdiapi.azurewebsites.net/api/tasks/",
+		data: JSON.stringify(taskInput),
+		contentType: "application/json",
+		success: function (res) {
+			console.log(res); //JSON
+			displayTask(taskInput);
+		},
+		error: function (error) {
+			console.log(error);
+			alert("omg, you messed up");
+		}
+
+	});
+
 }
 
 // append to the html element
@@ -72,7 +89,47 @@ $(".navi-toggle-btn").click(function () {
 // navi bar stuff
 
 
+
+// server comms 
+function testRequest() {
+	$.ajax({
+		type: "GET",
+		url: "https://fsdiapi.azurewebsites.net/ ",
+		success: function (goodNews) {
+			console.log(goodNews);
+
+		},
+		error: function (badNews) {
+			console.log(badNews);
+		}
+	});
+} // end of server comms
+
+function loadTasks() {
+	$.ajax({
+		type: "GET",
+		url: "https://fsdiapi.azurewebsites.net/api/tasks",
+		success: function (res) {
+			let data = JSON.parse(res);
+			console.log(data);
+			for (let i = 0; i < data.length; i++) {
+				let task = data[i];
+				if (task.name == "Gary") {
+					displayTask(task);
+				}
+
+			}
+		},
+		error: function (error) {
+			console.log(error);
+		},
+
+	});
+}
+
 function init() {
+
+	loadTasks();
 
 	$("#iImportant").click(toggleImportant);
 	$("#btnHideForm").click(toggleForm);
@@ -107,7 +164,4 @@ window.onload = init;
 
 
 
-/* <i class="fa-solid fa-thumbs-up"></i>
-
-<i class="fa-solid fa-thumbs-down"></i> */
 
