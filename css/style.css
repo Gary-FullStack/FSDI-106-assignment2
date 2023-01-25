@@ -9,16 +9,15 @@
   font-family: "lato", sans-serif;
 }
 
+/* I am REALLY not a fan of full documemt backgrounds.  They make a site look SO 1995 */
 body {
   background-color: rgba(0, 0, 0, 0.606);
-}
-
-body {
   min-height: 100%;
   background-image: url(/img/bgimg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 }
 
 /* code for the nav bar stuff */
