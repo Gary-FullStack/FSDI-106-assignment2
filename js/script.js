@@ -2,7 +2,6 @@ var importantIcon = "fa-solid fa-thumbs-up important";
 var nonImportantIcon = "fa-solid fa-thumbs-down";
 var isImportant = false;
 
-
 // the Thumbs up and down icon
 function toggleImportant() {
 	// console.log('Ive been Clicked');
